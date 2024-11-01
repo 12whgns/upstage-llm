@@ -9,6 +9,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_teddynote import logging
 from langchain_community.document_loaders import PyMuPDFLoader
 from dotenv import load_dotenv
 import os
@@ -16,6 +17,9 @@ import json
 
 
 load_dotenv()
+
+# 프로젝트 로깅
+logging.langsmith("뷰티하마 QA")
 
 st.title("뷰티하마 QA")
 
